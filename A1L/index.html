@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A1L</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Static/styles.css" />
+  </head>
+  <body>
+    <div class="Container">
+      <main>
+        <section id="page">
+          <header>
+            <section id="logoSection">
+              <img src="./Static/images/new logo-Photoroom.png" alt="Logo" />
+            </section>
+            <section id="searchSection">
+              <section class="searchIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </section>
+              <section id="searchInput">
+                <input type="text" onkeyup="search()" />
+              </section>
+            </section>
+            <section class="navbar">
+              <nav>
+                <ul id="topBar" class="navList">
+                  <li class="navLink link"><a href="#">Home</a></li>
+                  <li class="navLink link"><a href="#">Categories</a></li>
+                  <li class="navLink link"><a href="#">About</a></li>
+                  <li class="navLink link"><a href="#">Contact</a></li>
+                  <li id="cart">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="35"
+                      height="35"
+                      fill="white"
+                      class="bi bi-cart4"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+                      />
+                    </svg>
+                    <p class="cartLog">[<span>0</span>]</p>
+                  </li>
+                  <li id="menu" class="navLink" onclick="getSideBar()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="40px"
+                      viewBox="0 -960 960 960"
+                      width="40px"
+                      fill="white"
+                    >
+                      <path
+                        d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+                <ul id="sideBar" class="navList">
+                  <li class="navLink" id="cancel" onclick="hideSideBar()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="48px"
+                      viewBox="0 -960 960 960"
+                      width="48px"
+                      fill="white"
+                    >
+                      <path
+                        d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="navLink"><a href="#">Home</a></li>
+                  <li class="navLink"><a href="#">Categories</a></li>
+                  <li class="navLink"><a href="#">About</a></li>
+                  <li class="navLink"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </section>
+          </header>
+          <section id="pageText">
+            <div class="textSection">
+              <h1>A1L</h1>
+              <p><em>All in 1...</em></p>
+            </div>
+          </section>
+        </section>
+        <section id="products">
+          <section id="productList">
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Cargos/cargo 1.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Cargo trousers</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Cargos/cargo 2.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Cargo trousers</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Cargos/cargo 3.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Cargo trousers</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Cargos/cargo 4.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Cargo trousers</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Cargos/cargo 5.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Cargo trousers</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Cargos/cargo 6.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Cargo trousers</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 1.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 2.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 4.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 4.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 5.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 6.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 7.png"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 8.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 9.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/kicks/shoe 12.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shoes</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 1.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 2.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 3.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 4.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 5.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 6.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 7.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 8.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 9.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Shirts/shirt 10.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Shirt</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 1.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 2.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 3.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 4.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 5.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 6.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 7.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 8.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 9.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/sweatpants/spants 10.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Sweat Pants</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 1.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 2.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 3.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 4.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 5.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 6.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 7.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 8.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 9.jpeg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <section class="prodBlock">
+              <div class="imageSection">
+                <img
+                  src="./Static/images/Watches/watch 10.jpg"
+                  alt="product image"
+                />
+              </div>
+              <div class="p-details">
+                <h2>Watch</h2>
+                <h3>$25</h3>
+              </div>
+            </section>
+
+            <!-- <section class="prodBlock">
+                        <div class="imageSection">
+                            <img src="" alt="product image">
+                        </div>
+                        <div class="p-details">
+                            <h2></h2>
+                            <h3>$25</h3>
+                        </div>
+                    </section> -->
+          </section>
+        </section>
+        <section id="partners">
+          <div class="thirdHeader">
+            <h2>OUR PARTNERS</h2>
+          </div>
+          <div class="partnersList">
+            <div class="partner">
+              <img src="./Static/images/partners/adidas-Photoroom.png" alt="brand-image" />
+            </div>
+            <div class="partner">
+              <img src="./Static/images/partners/dr martens-Photoroom.png" alt="brand-image" />
+            </div>
+            <div class="partner">
+              <img src="./Static/images/partners/nike-Photoroom.png" alt="brand-image" />
+            </div>
+            <div class="partner">
+              <img src="./Static/images/partners/rolex-Photoroom.png" alt="brand-image" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous">
+    </script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
